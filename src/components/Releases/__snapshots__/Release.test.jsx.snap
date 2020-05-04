@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Release component renders Release 1`] = `
+<div>
+  <Link
+    to="/songs/Silkworm/3453lk4/Firewater"
+  >
+    <img
+      src="dink.png"
+    />
+    <h3>
+      Firewater
+       - 
+      May 4th, 1990
+    </h3>
+  </Link>
+</div>
+`;

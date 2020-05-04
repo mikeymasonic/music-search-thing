@@ -9,6 +9,7 @@ const Release = ({
   releaseDate = 'unknown',
   artistName
 }) => {
+  
   return (
     <div>
       <Link to={`/songs/${artistName}/${releaseId}/${releaseTitle}`}>
@@ -18,3 +19,13 @@ const Release = ({
     </div>
   );
 };
+
+Release.propTypes = {
+  releaseId: PropTypes.string.isRequired,
+  releaseTitle: PropTypes.string.isRequired,
+  releaseDate: PropTypes.string.isRequired,
+  releaseCover: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired,
+};
+
+export default Release;
