@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { getArtists } from '../../../services/getArtistsDetailsAPI';
 import Artists from '../../components/Artists/Artists';
 import SearchArtist from '../../components/Search-Artist/SearchArtist';
+import { getArtists } from '../../services/getArtistsDetailsAPI';
+import PropTypes from 'prop-types';
 
 
 export default class FindArtistsContainer extends Component {
   static propTypes = {
-    history: this.propTypes.object,
-    location: this.propTypes.object
+    history: PropTypes.object,
+    location: PropTypes.object
   }
 
   state = {
