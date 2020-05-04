@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchArtist component renders SearchArtist 1`] = `
+<div>
+  <input
+    name="artist"
+    onChange={[Function]}
+    type="text"
+    value="Silkworm"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;
