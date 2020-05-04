@@ -17,3 +17,25 @@ export const getArtists = (artistName, page) => {
       };
     });
 };
+
+export const getArtistReleases = (artistId, page) => {
+  return fetch(`https://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json&limit=25&offset=${(page - 1) * 25}`)
+    .then(res => {
+      if(!res) throw 'Unable to load releases, srry!';
+
+      return res.json();
+    })
+    .then((data) => {
+      const totalPages = data['release-count'];
+      const albums = data.releases.map(album => ({
+        releaseId: album.id,
+        releaseTitle: album.title,
+        releaseDate: album['release-events'][0].date,
+        coverArtCount: album['cover-art-archive'].front
+      }));
+      return {
+        albums,
+        totalPages
+      };
+    });
+};
