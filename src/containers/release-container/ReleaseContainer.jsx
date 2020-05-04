@@ -36,4 +36,17 @@ export default class ReleaseContainer extends Component {
     this.ListeningStateChangedEvent({ page });
     this.props.history.push(`/releases/${this.state.artistName}/${this.props.match.params.artistId}?page=${page}`);
   }
+
+  componentDidMount() {
+    this.fetchReleases();
+    const pageSearch = new URLSearchParams(this.props.location.search);
+    const page = parseInt(pageSearch.get('page')) || 1;
+    if(pageSearch) {
+      this.setState({ page });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.page !== this.state.page) return this.fetchReleases();
+  }
 }
