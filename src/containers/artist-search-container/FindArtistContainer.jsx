@@ -28,7 +28,7 @@ export default class FindArtistsContainer extends Component {
       .then(({ totalPages, singers }) => {
         this.setState({
           artistArray: singers,
-          loading: faulse,
+          loading: false,
           totalPages: Math.ceil(totalPages / 25)
         });
       })
@@ -36,6 +36,16 @@ export default class FindArtistsContainer extends Component {
         error: err,
         loading: true
       }));
+  }
+
+  onButtonClick = () => {
+    this.setState({ loading: true, page: 1 });
+    return this.fetchArtists();
+  }
+
+  changePageCount = (page) => {
+    this.setState({ page });
+    this.props.history.push(`/?query=${this.state.artist}&page=${page}`);
   }
 }
 
