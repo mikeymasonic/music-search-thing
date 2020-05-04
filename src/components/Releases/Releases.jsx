@@ -8,7 +8,7 @@ const Releases = ({ releaseArray, artistName }) => {
     <li key={releaseId}>
       <Release
         releaseId={releaseId}
-        releaseCover={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front-250` : placeholderImage}
+        releaseCover={coverArtCount ? `http://coverartarchive.org/release/${releaseId}/front-250` : placeholderImage }
         releaseDate={releaseDate}
         releaseTitle={releaseTitle}
         artistName={artistName}
@@ -27,7 +27,7 @@ Releases.propTypes = {
     releaseId: PropTypes.string.isRequired,
     releaseTitle: PropTypes.string.isRequired,
     releaseDate: PropTypes.string.isRequired,
-    CoverArtCount: PropTypes.string.isRequired,
+    coverArtCount: PropTypes.bool.isRequired
   })).isRequired,
   artistName: PropTypes.string.isRequired
 };

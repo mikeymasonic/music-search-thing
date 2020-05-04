@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Releases component renders Releases 1`] = `
+<ul>
+  <li
+    key="311"
+  >
+    <Release
+      artistName="Silkworm"
+      releaseCover="http://coverartarchive.org/release/311/front-250"
+      releaseDate="May 4th, 1990"
+      releaseId="311"
+      releaseTitle="Firewater"
+    />
+  </li>
+  <li
+    key="312"
+  >
+    <Release
+      artistName="Silkworm"
+      releaseCover="http://coverartarchive.org/release/312/front-250"
+      releaseDate="August 2nd, 1986"
+      releaseId="312"
+      releaseTitle="Lifestyle"
+    />
+  </li>
+</ul>
+`;
