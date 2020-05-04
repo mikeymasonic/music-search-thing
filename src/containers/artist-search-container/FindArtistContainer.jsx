@@ -4,6 +4,7 @@ import SearchArtist from '../../components/Search-Artist/SearchArtist';
 import { getArtists } from '../../services/getArtistsDetailsAPI';
 import PropTypes from 'prop-types';
 import Paging from '../../components/Paging/Paging';
+import Nav from '../Nav/Nav';
 
 
 export default class FindArtistsContainer extends Component {
@@ -103,6 +104,7 @@ export default class FindArtistsContainer extends Component {
 
     if(totalPages === 0) return (
       <div>
+        <Nav />
         <h2>Srry, no artist matches that name...</h2>
       </div>
     );
