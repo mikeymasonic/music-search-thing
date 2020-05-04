@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { getArtists } from '../../../services/getArtistsDetailsAPI';
+import Artists from '../../components/Artists/Artists';
+import SearchArtist from '../../components/Search-Artist/SearchArtist';
 
 
 export default class FindArtistsContainer extends Component {
@@ -61,6 +63,59 @@ export default class FindArtistsContainer extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if(prevState.page !== this.state.page) return this.fetchArtists();
+  }
+
+  render() {
+    const {
+      artistArray,
+      artist,
+      loading,
+      error,
+      page,
+      totalPages
+    } = this.state;
+
+    if(error) return (
+      <div>
+        <h2>Srry, no artist matches that name...</h2>
+      </div>
+    );
+
+    if(loading) return (
+      <div>
+        <h3>loading...</h3>
+      </div>
+    );
+
+    if(totalPages === 1) return (
+      <div>
+        <h2>Search for an artist....</h2>
+        <SearchArtist
+          artist={artist}
+          onButtonClick={this.onButtonClick}
+          onInputChange={this.onInputChange}
+        />
+        <Artists artistArray={artistArray} />
+      </div>
+    );
+
+    if(totalPages === 0) return (
+      <div>
+        <h2>Srry, no artist matches that name...</h2>
+      </div>
+    );
+
+    return (
+      <div>
+        <h2>Search for an artist...</h2>
+        <SearchArtist
+          artist={artist}
+          onButtonClick={this.onButtonClick}
+          onInputChange={this.onInputChange}
+        />
+        <Artists artistArray={artistArray} />
+      </div>
+    );
   }
 }
 
