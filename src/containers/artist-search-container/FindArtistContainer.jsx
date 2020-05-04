@@ -3,6 +3,7 @@ import Artists from '../../components/Artists/Artists';
 import SearchArtist from '../../components/Search-Artist/SearchArtist';
 import { getArtists } from '../../services/getArtistsDetailsAPI';
 import PropTypes from 'prop-types';
+import Paging from '../../components/Paging/Paging';
 
 
 export default class FindArtistsContainer extends Component {
@@ -113,6 +114,14 @@ export default class FindArtistsContainer extends Component {
           artist={artist}
           onButtonClick={this.onButtonClick}
           onInputChange={this.onInputChange}
+        />
+        <Paging
+          onClickPrevious={() => this.changePageCount(page - 1)}
+          onClickNext={() => this.changePageCount(page + 1)}
+          disableNext={totalPages === page}
+          disablePrev={page === 1}
+          currentPage={page}
+          totalPages={totalPages}
         />
         <Artists artistArray={artistArray} />
       </div>
