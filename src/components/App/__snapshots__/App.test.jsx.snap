@@ -12,6 +12,10 @@ exports[`App component renders App 1`] = `
       component={[Function]}
       path="/releases/:artistName/:artistId"
     />
+    <Route
+      component={[Function]}
+      path="/songs/:artistName/:releaseId/:releaseTitle"
+    />
   </BrowserRouter>
 </Fragment>
 `;

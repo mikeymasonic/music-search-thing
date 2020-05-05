@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Nav from '../containers/nav/Nav';
+import Nav from '../../containers/nav/Nav';
 
 const Lyrics = ({ title, lyrics, artistName }) => {
   return (
