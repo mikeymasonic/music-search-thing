@@ -23,20 +23,20 @@ export default class ReleaseContainer extends Component {
   fetchReleases = () => {
     return getArtistReleases(this.props.match.params.artistId, this.state.page)
       .then(({ totalPages, albums }) => {
-        this.ListeningStateChangedEvent({
+        this.setState({
           releaseArray: albums,
           loading: false,
           totalPages: Math.ceil(totalPages / 25)
         });
       })
-      .catch(err => this.ListeningStateChangedEvent({
+      .catch(err => this.setState({
         error: err,
         loading: true
       }));
   }
 
   changePageCount = (page) => {
-    this.ListeningStateChangedEvent({ page });
+    this.setState({ page });
     this.props.history.push(`/releases/${this.state.artistName}/${this.props.match.params.artistId}?page=${page}`);
   }
 
