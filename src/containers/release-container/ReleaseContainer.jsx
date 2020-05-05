@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getArtistReleases } from '../../services/getArtistsDetailsAPI';
 import Nav from '../nav/Nav';
-import Releases from '../../releases/Releases';
-import Paging from '../../paging/Paging';
+import Releases from '../../components/Releases/Releases';
+import Paging from '../../components/Paging/Paging';
 
 export default class ReleaseContainer extends Component {
   static propTypes = {
