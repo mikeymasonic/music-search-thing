@@ -57,3 +57,18 @@ export const getSongs = (releaseId) => {
       };
     });
 };
+
+export const getLyrics = (artistName, songTitle) => {
+  return fetch(`https://api.lyrics.ovh/v1/${artistName}/${songTitle}`)
+    .then(res => {
+      if(!res.ok) throw 'Unable to load lyrics...';
+
+      return res.json();
+    })
+    .then((data) => {
+      const lyrics = data.lyrics;
+      return {
+        lyrics
+      };
+    });
+};
