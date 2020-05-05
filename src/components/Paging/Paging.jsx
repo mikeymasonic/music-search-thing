@@ -21,8 +21,8 @@ const Paging = ({
 Paging.propTypes = {
   onClickPrevious: PropTypes.func.isRequired,
   onClickNext: PropTypes.func.isRequired,
-  disableNext: PropTypes.any.isRequired,
-  disablePrev: PropTypes.any.isRequired,
+  disableNext: PropTypes.bool.isRequired,
+  disablePrev: PropTypes.bool.isRequired,
   currentPage: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired
 };
