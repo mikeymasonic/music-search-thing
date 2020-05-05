@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getArtistReleases } from '../../services/getArtistsDetailsAPI';
+import Nav from '../nav/Nav';
+import Releases from '../../releases/Releases';
+import Paging from '../../paging/Paging';
 
 export default class ReleaseContainer extends Component {
   static propTypes = {
@@ -48,5 +51,61 @@ export default class ReleaseContainer extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if(prevState.page !== this.state.page) return this.fetchReleases();
+  }
+
+  render() {
+    const {
+      releaseArray,
+      page,
+      error,
+      loading,
+      totalPages
+    } = this.state;
+
+    if(error) return (
+      <div>
+        <Nav />
+        <h3>Srry! There are no releases for this artist...</h3>
+      </div>
+    );
+
+    if(loading) return (
+      <div>
+        <h2>Loading...</h2>
+      </div>
+    );
+
+    if(totalPages === 1) return (
+      <div>
+        <h2>Releases for {this.props.match.params.artistName}</h2>
+        <Nav />
+        <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
+      </div>
+    );
+
+    if(totalPages === 0) return (
+      <div>
+        <Nav />
+        <h3>Srry!  There are no releases for this artist...</h3>
+      </div>
+    );
+
+    return (
+      <>
+        <h2>
+        Releases for {this.props.match.params.artistName}
+        </h2>
+        <Nav />
+        <Paging 
+          onClickPrevious={() => this.changePageCount(page - 1)} 
+          onClickNext={() => this.changePageCount(page + 1)}
+          disableNext={totalPages === page}
+          disablePrev={page === 1}
+          currentPage={page}
+          totalPages={totalPages}
+        />
+        <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
+      </>
+    );
   }
 }
