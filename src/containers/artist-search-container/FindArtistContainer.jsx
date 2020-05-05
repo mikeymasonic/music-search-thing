@@ -4,8 +4,7 @@ import SearchArtist from '../../components/Search-Artist/SearchArtist';
 import { getArtists } from '../../services/getArtistsDetailsAPI';
 import PropTypes from 'prop-types';
 import Paging from '../../components/Paging/Paging';
-import Nav from '../Nav/Nav';
-
+import Nav from '../nav/Nav';
 
 export default class FindArtistsContainer extends Component {
   static propTypes = {

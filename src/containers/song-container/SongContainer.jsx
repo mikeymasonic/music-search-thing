@@ -4,7 +4,6 @@ import { getSongs } from '../../services/getArtistsDetailsAPI';
 import Nav from '../nav/Nav';
 import Songs from '../../components/Songs/Songs';
 
-
 export default class SongContainer extends Component {
   static propTypes = {
     match: PropTypes.object
