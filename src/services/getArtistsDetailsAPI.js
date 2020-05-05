@@ -47,17 +47,13 @@ export const getSongs = (releaseId) => {
 
       return res.json();
     })
-    .then((data) => {
-      const totalPages = data['release-count'];
-      const albums = data.releases.map(album => ({
-        releaseId: album.id,
-        releaseTitle: album.title,
-        releaseDate: album['release-events'][0].date,
-        coverArtCount: album['cover-art-archive'].front
+    .then(({ recordings }) => {
+      const songs = recordings.map(song => ({
+        songId: song.id,
+        songTitle: song.title
       }));
       return {
-        albums,
-        totalPages
+        songs
       };
     });
 };
