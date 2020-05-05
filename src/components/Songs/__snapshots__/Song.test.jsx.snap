@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Song component renders Song 1`] = `
+<Fragment>
+  <Link
+    to="/lyrics/Silkworm/Never Met A Man I didn\\\\'t Like"
+  >
+    <h3>
+      Never Met A Man I didn\\'t Like
+    </h3>
+  </Link>
+</Fragment>
+`;
