@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Artist = ({ artistId, artistName }) => {
   return (
-    <>
-      <Link to={`/releases/${artistName}/${artistId}`}>
-        <h3>{artistName}</h3>
-      </Link>
-    </>  
+    <Link to={`/releases/${artistName}/${artistId}`}>
+      <h3>{artistName}</h3>
+    </Link>
   );
 };
 
