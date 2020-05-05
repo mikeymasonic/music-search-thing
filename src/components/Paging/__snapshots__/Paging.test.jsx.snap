@@ -3,7 +3,7 @@
 exports[`Paging component renders Paging 1`] = `
 <section>
   <button
-    disabled={7}
+    disabled={false}
     onClick={[Function]}
   >
     prev
@@ -15,7 +15,7 @@ exports[`Paging component renders Paging 1`] = `
     4
   </p>
   <button
-    disabled={7}
+    disabled={true}
     onClick={[Function]}
   >
     next

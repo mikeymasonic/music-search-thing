@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const SearchArtist = ({ artist, onInputChange, onButtonClick }) => {
   return (
-    <section>
+    <form onSubmit={onButtonClick}>
       <input type='text' name='artist' value={artist} onChange={onInputChange} />
-      <button onClick={onButtonClick}>Search</button>
-    </section>
+      <button type='submit'>Search</button>
+    </form>
   );
 };
 

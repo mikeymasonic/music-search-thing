@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Nav = ({ history }) => {
   return (
@@ -8,6 +9,10 @@ const Nav = ({ history }) => {
       <button onClick={() => history.goBack()}>back</button>
     </section>
   );
+};
+
+Nav.propTypes = {
+  history: PropTypes.object.isRequired
 };
 
 export default withRouter(Nav);

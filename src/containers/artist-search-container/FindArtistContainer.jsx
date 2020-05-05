@@ -42,9 +42,9 @@ export default class FindArtistsContainer extends Component {
       }));
   }
 
-  onButtonClick = () => {
+  onButtonClick = (event) => {
+    event.preventDefault();
     this.setState({ loading: true, page: 1 }, () => this.fetchArtists());
-    return this.fetchArtists();
   }
 
   changePageCount = (page) => {

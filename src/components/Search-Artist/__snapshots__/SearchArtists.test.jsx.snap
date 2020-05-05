@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchArtist component renders SearchArtist 1`] = `
-<section>
+<form
+  onSubmit={[Function]}
+>
   <input
     name="artist"
     onChange={[Function]}
@@ -9,9 +11,9 @@ exports[`SearchArtist component renders SearchArtist 1`] = `
     value="Silkworm"
   />
   <button
-    onClick={[Function]}
+    type="submit"
   >
     Search
   </button>
-</section>
+</form>
 `;
