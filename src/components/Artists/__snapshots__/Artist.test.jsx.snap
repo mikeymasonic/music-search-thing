@@ -2,11 +2,12 @@
 
 exports[`Artists component renders Artist 1`] = `
 <Fragment>
-  <h3>
-    Silkworm
-  </h3>
-  <h4>
-    311
-  </h4>
+  <Link
+    to="/releases/Silkworm/311"
+  >
+    <h3>
+      Silkworm
+    </h3>
+  </Link>
 </Fragment>
 `;
