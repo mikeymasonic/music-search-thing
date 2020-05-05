@@ -43,7 +43,7 @@ export default class FindArtistsContainer extends Component {
   }
 
   onButtonClick = () => {
-    this.setState({ loading: true, page: 1 });
+    this.setState({ loading: true, page: 1 }, () => this.fetchArtists());
     return this.fetchArtists();
   }
 
@@ -54,7 +54,7 @@ export default class FindArtistsContainer extends Component {
 
   componentDidMount() {
     const searchArtist = new URLSearchParams(this.props.location.search);
-    const queryArtist = searchArtist.get('query');
+    const queryArtist = searchArtist.get('query') || '';
     const page = parseInt(searchArtist.get('page')) || 1;
     if(queryArtist) {
       this.setState({ artist: queryArtist, page }, () => {

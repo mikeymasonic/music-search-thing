@@ -6,7 +6,8 @@ export const getArtists = (artistName, page) => {
       return res.json();
     })
     .then(({ count, artists }) => {
-      const totalPages = count;
+      // const totalPages = count;
+      const totalPages = Math.ceil(count / 25);
       const singers = artists.map(singer => ({
         artistId: singer.id,
         artistName: singer.name
