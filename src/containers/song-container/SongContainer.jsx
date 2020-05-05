@@ -37,16 +37,16 @@ export default class SongContainer extends Component {
     const { songsArray, error, loading } = this.state;
 
     if(error) return (
-      <div>
+      <section>
         <Nav />
         <h3>Sorry, songs are not available for this release...</h3>
-      </div>
+      </section>
     );
 
     if(loading) return (
-      <div>
+      <section>
         <h3>loading...</h3>
-      </div>
+      </section>
     );
 
     return (

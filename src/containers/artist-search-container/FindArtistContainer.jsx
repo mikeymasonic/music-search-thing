@@ -78,19 +78,19 @@ export default class FindArtistsContainer extends Component {
     } = this.state;
 
     if(error) return (
-      <div>
+      <section>
         <h2>Srry, no artist matches that name...</h2>
-      </div>
+      </section>
     );
 
     if(loading) return (
-      <div>
+      <section>
         <h3>loading...</h3>
-      </div>
+      </section>
     );
 
     if(totalPages === 1) return (
-      <div>
+      <section>
         <h2>Search for an artist....</h2>
         <SearchArtist
           artist={artist}
@@ -98,18 +98,18 @@ export default class FindArtistsContainer extends Component {
           onInputChange={this.onInputChange}
         />
         <Artists artistArray={artistArray} />
-      </div>
+      </section>
     );
 
     if(totalPages === 0) return (
-      <div>
+      <section>
         <Nav />
         <h2>Srry, no artist matches that name...</h2>
-      </div>
+      </section>
     );
 
     return (
-      <div>
+      <section>
         <h2>Search for an artist...</h2>
         <SearchArtist
           artist={artist}
@@ -125,7 +125,7 @@ export default class FindArtistsContainer extends Component {
           totalPages={totalPages}
         />
         <Artists artistArray={artistArray} />
-      </div>
+      </section>
     );
   }
 }

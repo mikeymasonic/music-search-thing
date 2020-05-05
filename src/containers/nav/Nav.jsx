@@ -1,11 +1,13 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = ({ history }) => {
   return (
-    <div>
-      <a href='/'><button>Search Artists</button></a>
-    </div>
+    <section>
+      <Link to='/'><button>Search Artists</button></Link>
+      <button onClick={() => history.goBack()}>back</button>
+    </section>
   );
 };
 
-export default Nav;
+export default withRouter(Nav);

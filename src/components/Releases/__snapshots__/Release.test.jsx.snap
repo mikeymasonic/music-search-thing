@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Release component renders Release 1`] = `
-<div>
+<section>
   <Link
     to="/songs/Silkworm/3453lk4/Firewater"
   >
@@ -14,5 +14,5 @@ exports[`Release component renders Release 1`] = `
       May 4th, 1990
     </h3>
   </Link>
-</div>
+</section>
 `;

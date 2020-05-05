@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paging component renders Paging 1`] = `
-<div>
+<section>
   <button
-    disable={7}
+    disabled={7}
     onClick={[Function]}
   >
     prev
@@ -20,5 +20,5 @@ exports[`Paging component renders Paging 1`] = `
   >
     next
   </button>
-</div>
+</section>
 `;

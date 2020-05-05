@@ -63,35 +63,35 @@ export default class ReleaseContainer extends Component {
     } = this.state;
 
     if(error) return (
-      <div>
+      <section>
         <Nav />
         <h3>Srry! There are no releases for this artist...</h3>
-      </div>
+      </section>
     );
 
     if(loading) return (
-      <div>
+      <section>
         <h2>Loading...</h2>
-      </div>
+      </section>
     );
 
     if(totalPages === 1) return (
-      <div>
+      <section>
         <h2>Releases for {this.props.match.params.artistName}</h2>
         <Nav />
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
-      </div>
+      </section>
     );
 
     if(totalPages === 0) return (
-      <div>
+      <section>
         <Nav />
         <h3>Srry!  There are no releases for this artist...</h3>
-      </div>
+      </section>
     );
 
     return (
-      <>
+      <section>
         <h2>
         Releases for {this.props.match.params.artistName}
         </h2>
@@ -105,7 +105,7 @@ export default class ReleaseContainer extends Component {
           totalPages={totalPages}
         />
         <Releases artistName={this.props.match.params.artistName} releaseArray={releaseArray} />
-      </>
+      </section>
     );
   }
 }

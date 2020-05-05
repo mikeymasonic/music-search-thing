@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Song = ({ songTitle, artistName }) => {
   return (
-    <>
-      <Link to={`/lyrics/${artistName}/${songTitle}`}>
-        <h3>{songTitle}</h3>
-      </Link>
-    </>
+    <Link to={`/lyrics/${artistName}/${songTitle}`}>
+      <h3>{songTitle}</h3>
+    </Link>
   );
 };
 

@@ -10,7 +10,7 @@ exports[`Lyrics component renders Lyrics 1`] = `
      by 
     Silkworm
   </h3>
-  <Nav />
+  <withRouter(Nav) />
   <pre>
     oh man isn't this song great??
   </pre>

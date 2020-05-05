@@ -43,24 +43,24 @@ export default class LyricContainer extends Component {
     } = this.state;
 
     if(error) return (
-      <div>
+      <section>
         <Nav />
         <h3>Sorry, the lyrics for this song are not available...</h3>
-      </div>
+      </section>
     );
 
     if(loading) return (
-      <div>loading...</div>
+      <section>loading...</section>
     );
 
     return (
-      <div>
+      <section>
         <Lyrics 
           title={this.props.match.params.songTitle}
           lyrics={lyrics}
           artistName={this.props.match.params.artistName}
         />
-      </div>
+      </section>
     );
   }
 }
