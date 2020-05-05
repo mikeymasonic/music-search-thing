@@ -43,7 +43,7 @@ export const getArtistReleases = (artistId, page) => {
 export const getSongs = (releaseId) => {
   return fetch(`https://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`)
     .then(res => {
-      if(!res.ok) throse res.status;
+      if(!res.ok) throw res.status;
 
       return res.json();
     })
