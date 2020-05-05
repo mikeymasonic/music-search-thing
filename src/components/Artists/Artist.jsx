@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const Artist = ({ artistId, artistName }) => {
   return (
     <>
-      <Link to={`/releases/${artistName}/${artistId}`}><h3>{artistName}</h3>
+      <Link to={`/releases/${artistName}/${artistId}`}>
+        <h3>{artistName}</h3>
       </Link>
     </>  
   );
-
 };
 
 Artist.propTypes = {
