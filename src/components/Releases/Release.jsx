@@ -11,12 +11,12 @@ const Release = ({
 }) => {
   
   return (
-    <div>
+    <section>
       <Link to={`/songs/${artistName}/${releaseId}/${releaseTitle}`}>
         <img src={releaseCover} />
         <h3>{releaseTitle} - {releaseDate}</h3>
       </Link>
-    </div>
+    </section>
   );
 };
 

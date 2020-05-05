@@ -10,11 +10,11 @@ const Paging = ({
   totalPages
 }) => {
   return (
-    <div>
-      <button onClick={onClickPrevious} disable={disablePrev}>prev</button>
+    <section>
+      <button onClick={onClickPrevious} disabled={disablePrev}>prev</button>
       <p>Page {currentPage} of {totalPages}</p>
       <button onClick={onClickNext} disabled={disableNext}>next</button>
-    </div>
+    </section>
   );
 };
 
