@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Artist = ({ artistId, artistName }) => {
   return (
     <>
-      <h3>{artistName}</h3>
-      <h4>{artistId}</h4>
+      <Link to={`/releases/${artistName}/${artistId}`}><h3>{artistName}</h3>
+      </Link>
     </>  
   );
 
