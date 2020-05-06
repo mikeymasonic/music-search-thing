@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Paging.css';
 
 const Paging = ({
   onClickPrevious,
@@ -10,9 +11,9 @@ const Paging = ({
   totalPages
 }) => {
   return (
-    <section>
+    <section className={styles.paging}>
       <button onClick={onClickPrevious} disabled={disablePrev}>prev</button>
-      <p>Page {currentPage} of {totalPages}</p>
+      <p className={styles.paging}> - page {currentPage} of {totalPages} -</p>
       <button onClick={onClickNext} disabled={disableNext}>next</button>
     </section>
   );

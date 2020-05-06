@@ -2,6 +2,7 @@
 
 exports[`SearchArtist component renders SearchArtist 1`] = `
 <form
+  className="searchArtist"
   onSubmit={[Function]}
 >
   <input
@@ -13,7 +14,7 @@ exports[`SearchArtist component renders SearchArtist 1`] = `
   <button
     type="submit"
   >
-    Search
+    search
   </button>
 </form>
 `;

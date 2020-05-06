@@ -10,7 +10,8 @@ export const getArtists = (artistName, page) => {
       const totalPages = Math.ceil(count / 25);
       const singers = artists.map(singer => ({
         artistId: singer.id,
-        artistName: singer.name
+        artistName: singer.name,
+        disambiguation: singer.disambiguation
       }));
       return {
         singers,
@@ -31,7 +32,7 @@ export const getArtistReleases = (artistId, page) => {
       const albums = data.releases.map(album => ({
         releaseId: album.id,
         releaseTitle: album.title,
-        releaseDate: album['release-events'][0].date,
+        releaseDate: album['release-events']?.[0].date,
         coverArtCount: album['cover-art-archive'].front
       }));
       return {

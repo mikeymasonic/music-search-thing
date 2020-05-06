@@ -5,6 +5,9 @@ import { getArtists } from '../../services/getArtistsDetailsAPI';
 import PropTypes from 'prop-types';
 import Paging from '../../components/Paging/Paging';
 import Nav from '../nav/Nav';
+import LoadingGif from '../../assets/Load.gif';
+import HomeGif from '../../assets/Home.gif';
+import styles from './FindArtistContainer.css';
 
 export default class FindArtistsContainer extends Component {
   static propTypes = {
@@ -79,25 +82,27 @@ export default class FindArtistsContainer extends Component {
 
     if(error) return (
       <section>
-        <h2>Srry, no artist matches that name...</h2>
+        <h2 className={styles.titleh2}>Srry, no artist matches that name...</h2>
       </section>
     );
 
     if(loading) return (
-      <section>
-        <h3>loading...</h3>
+      <section className={styles.FindArtistContainer}>
+        <h2 className={styles.titleh2}>loading...</h2>
+        <img alt='vinyl record spinning' src={LoadingGif}/>
       </section>
     );
 
     if(totalPages === 1) return (
-      <section>
-        <h2>Search for an artist....</h2>
+      <section className={styles.FindArtistContainer}>
+        <h2 className={styles.titleh2}>search for an artist....</h2>     
         <SearchArtist
           artist={artist}
           onButtonClick={this.onButtonClick}
           onInputChange={this.onInputChange}
         />
         <Artists artistArray={artistArray} />
+        <img className={styles.homeGif} alt='animated fingers traveling on a keyboard' src={HomeGif}/>
       </section>
     );
 
@@ -109,8 +114,8 @@ export default class FindArtistsContainer extends Component {
     );
 
     return (
-      <section>
-        <h2>Search for an artist...</h2>
+      <section className={styles.FindArtistContainer}>
+        <h2 className={styles.titleh2}>search for an artist...</h2>  
         <SearchArtist
           artist={artist}
           onButtonClick={this.onButtonClick}
@@ -125,6 +130,7 @@ export default class FindArtistsContainer extends Component {
           totalPages={totalPages}
         />
         <Artists artistArray={artistArray} />
+        <img alt='animated fingers traveling on a keyboard' src={HomeGif}/>
       </section>
     );
   }

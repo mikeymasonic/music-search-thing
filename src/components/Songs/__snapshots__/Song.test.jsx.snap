@@ -2,9 +2,12 @@
 
 exports[`Song component renders Song 1`] = `
 <Link
+  className="songlink"
   to="/lyrics/Silkworm/Never Met A Man I didn\\\\'t Like"
 >
-  <h3>
+  <h3
+    className="song"
+  >
     Never Met A Man I didn\\'t Like
   </h3>
 </Link>

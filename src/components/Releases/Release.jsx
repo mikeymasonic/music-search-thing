@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './Release.css';
 
 const Release = ({
   releaseCover,
@@ -11,10 +12,10 @@ const Release = ({
 }) => {
   
   return (
-    <section>
-      <Link to={`/songs/${artistName}/${releaseId}/${releaseTitle}`}>
+    <section className={styles.release}>
+      <Link className={styles.link} to={`/songs/${artistName}/${releaseId}/${releaseTitle}`}>
         <img src={releaseCover} />
-        <h3>{releaseTitle} - {releaseDate}</h3>
+        <h2 className={styles.titleh2}>{releaseTitle}</h2> <h3 className={styles.titleh3}>released: {releaseDate}</h3>
       </Link>
     </section>
   );

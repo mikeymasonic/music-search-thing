@@ -1,19 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Artist from './Artist';
+import styles from './Artists.css';
 
 const Artists = ({ artistArray }) => {
-  const artistList = artistArray.map(({ artistId, artistName }) => (
+  const artistList = artistArray.map(({ artistId, artistName, disambiguation }) => (
     <li key={artistId}>
       <Artist
         artistId={artistId}
         artistName={artistName}
+        disambiguation={disambiguation}
       />
     </li>
   ));
   
   return (
-    <ul>
+    <ul className={styles.artists}>
       {artistList}
     </ul>
   );

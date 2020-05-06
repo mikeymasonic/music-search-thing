@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { getLyrics } from '../../services/getArtistsDetailsAPI';
 import Nav from '../nav/Nav';
 import Lyrics from '../../components/Lyrics/Lyrics';
+import LoadingGif from '../../assets/Load.gif';
+import styles from './LyricContainer.css';
 
 export default class LyricContainer extends Component {
   static propTypes = {
@@ -45,12 +47,15 @@ export default class LyricContainer extends Component {
     if(error) return (
       <section>
         <Nav />
-        <h3>Sorry, the lyrics for this song are not available...</h3>
+        <h3 className={styles.titleh3}>Sorry, the lyrics for this song are not available...</h3>
       </section>
     );
 
     if(loading) return (
-      <section>loading...</section>
+      <section className={styles.LyricContainer}>
+        <h2 className={styles.titleh2}>loading...</h2>
+        <img alt='vinyl record spinning' src={LoadingGif}/>
+      </section>
     );
 
     return (

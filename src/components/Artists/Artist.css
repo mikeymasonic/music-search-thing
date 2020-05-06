@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+.artist {
+  height: 10vw;
+  width: 20vw;
+  text-align: center;
+  margin: 0 3vw 3vw 0;
+  border: .2vw solid rgb(133, 220, 226);
+  border-radius: 1rem;
+  font-size: 1.4vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.artist span {
+  color: gray;
+  font-size: 1vw;
+}
+
+.link {
+  text-decoration: none;
+  color: #f7d89e;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.link:hover {
+  color: white;
+}
+
+.artist:hover {
+  background: hotpink;;
+}
+
+.titleh2 {
+  font-size: 2vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #f7d89e;
+  font-weight: 200;
+}

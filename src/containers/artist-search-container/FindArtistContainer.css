@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+.FindArtistContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.FindArtistContainer img {
+  width: 30vw;
+}
+
+.homeGif {
+  margin: 3vw;
+  margin-top: -0.5vw;
+  border: .2vw solid rgb(133, 220, 226);
+  border-radius: 1vw;
+}
+
+.titleh2 {
+  font-size: 2vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #f7d89e;
+  font-weight: 200;
+  /* color: #aac4da; */
+}
+
+.titleh3 {
+  font-size: 3vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #f7d89e;
+}

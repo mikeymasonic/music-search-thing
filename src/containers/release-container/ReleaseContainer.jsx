@@ -4,6 +4,8 @@ import { getArtistReleases } from '../../services/getArtistsDetailsAPI';
 import Nav from '../nav/Nav';
 import Releases from '../../components/Releases/Releases';
 import Paging from '../../components/Paging/Paging';
+import LoadingGif from '../../assets/Load.gif';
+import styles from './ReleaseContainer.css';
 
 export default class ReleaseContainer extends Component {
   static propTypes = {
@@ -30,14 +32,14 @@ export default class ReleaseContainer extends Component {
         });
       })
       .catch(err => this.setState({
-        error: err,
+        error: err.message,
         loading: true
       }));
   }
 
   changePageCount = (page) => {
     this.setState({ page });
-    this.props.history.push(`/releases/${this.state.artistName}/${this.props.match.params.artistId}?page=${page}`);
+    this.props.history.push(`/releases/${this.props.match.params.artistName}/${this.props.match.params.artistId}?page=${page}`);
   }
 
   componentDidMount() {
@@ -65,13 +67,14 @@ export default class ReleaseContainer extends Component {
     if(error) return (
       <section>
         <Nav />
-        <h3>Srry! There are no releases for this artist...</h3>
+        <h3 className={styles.titleh3}>Srry! There are no releases for this artist...</h3>
       </section>
     );
 
     if(loading) return (
-      <section>
-        <h2>Loading...</h2>
+      <section className={styles.releaseContainer}>
+        <h2 className={styles.titleh2}>loading...</h2>
+        <img alt='vinyl record spinning' src={LoadingGif}/>
       </section>
     );
 
@@ -86,14 +89,14 @@ export default class ReleaseContainer extends Component {
     if(totalPages === 0) return (
       <section>
         <Nav />
-        <h3>Srry!  There are no releases for this artist...</h3>
+        <h3 className={styles.titleh3}>Srry!  There are no releases for this artist...</h3>
       </section>
     );
 
     return (
       <section>
-        <h2>
-        Releases for {this.props.match.params.artistName}
+        <h2 className={styles.titleh2}>
+        releases for {this.props.match.params.artistName}
         </h2>
         <Nav />
         <Paging 

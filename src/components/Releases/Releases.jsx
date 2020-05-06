@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Release from './Release';
 import placeholderImage from '../../assets/AlbumCoverPlaceholder.png';
+import styles from './Releases.css';
 
 const Releases = ({ releaseArray, artistName }) => {
   const releaseList = releaseArray.map(({ releaseId, releaseDate, releaseTitle, coverArtCount }) => (
@@ -16,7 +17,7 @@ const Releases = ({ releaseArray, artistName }) => {
     </li>
   ));
   return (
-    <ul>
+    <ul className={styles.releases}>
       {releaseList}
     </ul>
   );

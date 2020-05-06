@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { getSongs } from '../../services/getArtistsDetailsAPI';
 import Nav from '../nav/Nav';
 import Songs from '../../components/Songs/Songs';
+import LoadingGif from '../../assets/Load.gif';
+import styles from './SongContainer.css';
 
 export default class SongContainer extends Component {
   static propTypes = {
@@ -44,14 +46,15 @@ export default class SongContainer extends Component {
     );
 
     if(loading) return (
-      <section>
-        <h3>loading...</h3>
+      <section className={styles.SongContainer}>
+        <h2 className={styles.titleh2}>loading...</h2>
+        <img alt='vinyl record spinning' src={LoadingGif}/>
       </section>
     );
 
     return (
       <>
-        <h2>Songs from <em>{this.props.match.params.releaseTitle}</em> by {this.props.match.params.artistName}</h2>
+        <h2 className={styles.titleh2}>Songs from <em>{this.props.match.params.releaseTitle}</em> by {this.props.match.params.artistName}</h2>
         <Nav />
         <Songs artistName={this.props.match.params.artistName} songsArray={songsArray} />
       </>

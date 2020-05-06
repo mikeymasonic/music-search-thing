@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+.lyricspre{
+  text-align: center;
+  margin: 0vw 10vw 0vw 10vw;
+  border: .2vw solid rgb(133, 220, 226);
+  padding: 1vw;
+  border-radius: 1rem;
+  font-size: 1vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.lyricsh3 {
+  font-size: 2vw;
+  color: #f7d89e;
+  text-align: center;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+}

@@ -1,11 +1,12 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import styles from './Nav.css';
 
 const Nav = ({ history }) => {
   return (
-    <section>
-      <Link to='/'><button>Search Artists</button></Link>
+    <section className={styles.nav}>
+      <Link to='/'><button>home</button></Link>
       <button onClick={() => history.goBack()}>back</button>
     </section>
   );
