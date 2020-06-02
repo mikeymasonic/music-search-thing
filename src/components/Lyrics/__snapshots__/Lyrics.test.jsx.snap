@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lyrics component renders Lyrics 1`] = `
+<section
+  className="Lyrics"
+>
+  <h3
+    className="lyricsh3"
+  >
+    Lyrics for 
+    <em>
+      Never Met A Man I Didn't Like
+    </em>
+     by 
+    Silkworm
+  </h3>
+  <withRouter(Nav) />
+  <pre
+    className="lyricspre"
+  >
+    oh man isn't this song great??
+  </pre>
+</section>
+`;

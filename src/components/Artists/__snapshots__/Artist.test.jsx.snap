@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artists component renders Artist 1`] = `
+<Fragment>
+  <Link
+    className="link"
+    to="/releases/Silkworm/311"
+  >
+    <section
+      className="artist"
+    >
+      <h3
+        className="titleh2"
+      >
+        Silkworm
+      </h3>
+      <span />
+    </section>
+  </Link>
+</Fragment>
+`;

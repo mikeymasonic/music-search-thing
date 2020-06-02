@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+.LyricContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.releaseContainer img {
+  width: 30vw;
+}
+
+.titleh2 {
+  font-size: 3vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #f7d89e;
+  font-weight: 200;
+}
+
+.titleh3 {
+  font-size: 3vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #f7d89e;
+  font-weight: 200;
+}

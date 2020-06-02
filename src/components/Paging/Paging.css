@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(93, 93, 93);
+  font-size: 1.1vw;
+}
+
+.paging button {
+  background-color: rgb(133, 220, 226);
+  color: white;
+  width: 3vw;
+  height: 2.6vw;
+  font-size: 1vw;
+  text-align: center;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paging button:hover {
+  background-color: hotpink;
+}
+
+.paging input {
+  width: 14vw;
+  height: 2vw;
+  font-size: 1.4vw;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: .5vw;
+  border: dotted .1vw rgb(197, 197, 197);
+  color: rgb(93, 93, 93);
+}
+
+.paging p {
+  margin: 10px;
+}
